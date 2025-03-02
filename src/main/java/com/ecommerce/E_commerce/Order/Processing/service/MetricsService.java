@@ -4,7 +4,9 @@ import com.ecommerce.E_commerce.Order.Processing.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class MetricsService {
@@ -22,8 +24,13 @@ public class MetricsService {
         Double avg = orderRepository.findAverageProcessingTime();
         return avg != null ? avg : 0.0;
     }
-    public List<Objects[]> getCountOfOrdersByStatus(){
-        return orderRepository.countByStatus();
+    public Map<String, Object> getCountOfOrdersByStatus(){
+        List<Object[]> statusCounts = orderRepository.countByStatus();
+        return statusCounts.stream()
+                .collect(Collectors.toMap(
+                        obj -> (String) obj[0],
+                        obj -> (Long) obj[1]
+                ));
     }
 
 

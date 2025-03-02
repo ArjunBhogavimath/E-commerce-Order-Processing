@@ -3,6 +3,7 @@ package com.ecommerce.E_commerce.Order.Processing.service;
 import com.ecommerce.E_commerce.Order.Processing.config.QueueConfig;
 import com.ecommerce.E_commerce.Order.Processing.enums.OrderStatus;
 import com.ecommerce.E_commerce.Order.Processing.model.Order;
+import com.ecommerce.E_commerce.Order.Processing.model.OrderStatusResponse;
 import com.ecommerce.E_commerce.Order.Processing.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
@@ -33,12 +34,12 @@ public class OrderService {
     }
 
     //api service to get the order status
-    public String getStatus(Long orderId){
+    public OrderStatusResponse getStatus(Long orderId){
         // to get the status 1st i need to fetch the order
         Order order = orderRepository.findById(orderId)
                 .orElseThrow(() -> new RuntimeException("Order not found"));
         //there will be cases where order will not be found,
         //so we either needs to cover it with optional, or throw the error if not found
-        return order.getStatus().name();
+        return new OrderStatusResponse(order.getStatus().name());
     }
 }

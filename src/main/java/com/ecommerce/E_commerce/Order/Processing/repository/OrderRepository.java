@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-import java.util.Objects;
 
 public interface OrderRepository extends JpaRepository<Order,Long> {
 
@@ -13,5 +12,5 @@ public interface OrderRepository extends JpaRepository<Order,Long> {
     Double findAverageProcessingTime();
 
     @Query("SELECT o.status, count(o) FROM order o GROUP BY o.status")
-    List<Objects[]> countByStatus();
+    List<Object[]> countByStatus();
 }
