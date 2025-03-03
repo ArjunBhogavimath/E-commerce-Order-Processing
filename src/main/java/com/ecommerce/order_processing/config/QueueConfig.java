@@ -1,6 +1,6 @@
-package com.ecommerce.E_commerce.Order.Processing.config;
+package com.ecommerce.order_processing.config;
 
-import com.ecommerce.E_commerce.Order.Processing.model.Order;
+import com.ecommerce.order_processing.model.Order;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.BlockingQueue;

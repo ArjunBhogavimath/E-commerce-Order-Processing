@@ -1,10 +1,11 @@
-package com.ecommerce.E_commerce.Order.Processing.service;
+package com.ecommerce.order_processing.service;
 
-import com.ecommerce.E_commerce.Order.Processing.config.QueueConfig;
-import com.ecommerce.E_commerce.Order.Processing.enums.OrderStatus;
-import com.ecommerce.E_commerce.Order.Processing.model.Order;
-import com.ecommerce.E_commerce.Order.Processing.model.OrderStatusResponse;
-import com.ecommerce.E_commerce.Order.Processing.repository.OrderRepository;
+import com.ecommerce.order_processing.config.QueueConfig;
+import com.ecommerce.order_processing.enums.OrderStatus;
+import com.ecommerce.order_processing.model.Order;
+import com.ecommerce.order_processing.model.OrderStatusResponse;
+import com.ecommerce.order_processing.repository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -12,8 +13,10 @@ import java.time.LocalDateTime;
 @Service
 public class OrderService {
 
+    @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
     private QueueConfig queueConfig;
 
     public Order createOrder(Order order){

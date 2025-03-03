@@ -1,6 +1,6 @@
-package com.ecommerce.E_commerce.Order.Processing.repository;
+package com.ecommerce.order_processing.repository;
 
-import com.ecommerce.E_commerce.Order.Processing.model.Order;
+import com.ecommerce.order_processing.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

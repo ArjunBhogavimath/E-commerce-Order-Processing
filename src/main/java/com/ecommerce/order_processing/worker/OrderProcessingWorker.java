@@ -1,15 +1,15 @@
-package com.ecommerce.E_commerce.Order.Processing.worker;
+package com.ecommerce.order_processing.worker;
 
-import com.ecommerce.E_commerce.Order.Processing.enums.OrderStatus;
-import com.ecommerce.E_commerce.Order.Processing.model.Order;
-import com.ecommerce.E_commerce.Order.Processing.repository.OrderRepository;
+import com.ecommerce.order_processing.enums.OrderStatus;
+import com.ecommerce.order_processing.model.Order;
+import com.ecommerce.order_processing.repository.OrderRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.BlockingQueue;
 
-@Component
+//@Component
 public class OrderProcessingWorker {
     @Autowired
     private BlockingQueue<Order> orderQueue;
@@ -17,7 +17,7 @@ public class OrderProcessingWorker {
     @Autowired
     private OrderRepository orderRepository;
 
-    @PostConstruct
+  //  @PostConstruct
     public void processOrders() {
         new Thread(() -> {
             while (true) {

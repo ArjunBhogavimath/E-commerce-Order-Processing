@@ -1,6 +1,6 @@
-package com.ecommerce.E_commerce.Order.Processing.controller;
+package com.ecommerce.order_processing.controller;
 
-import com.ecommerce.E_commerce.Order.Processing.service.MetricsService;
+import com.ecommerce.order_processing.service.MetricsService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

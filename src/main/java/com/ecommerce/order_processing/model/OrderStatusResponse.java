@@ -1,4 +1,4 @@
-package com.ecommerce.E_commerce.Order.Processing.model;
+package com.ecommerce.order_processing.model;
 
 import lombok.Data;
 

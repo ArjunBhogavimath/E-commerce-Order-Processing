@@ -1,4 +1,4 @@
-package com.ecommerce.E_commerce.Order.Processing;
+package com.ecommerce.order_processing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

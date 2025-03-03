@@ -1,8 +1,8 @@
-package com.ecommerce.E_commerce.Order.Processing.controller;
+package com.ecommerce.order_processing.controller;
 
-import com.ecommerce.E_commerce.Order.Processing.model.Order;
-import com.ecommerce.E_commerce.Order.Processing.model.OrderStatusResponse;
-import com.ecommerce.E_commerce.Order.Processing.service.OrderService;
+import com.ecommerce.order_processing.model.Order;
+import com.ecommerce.order_processing.model.OrderStatusResponse;
+import com.ecommerce.order_processing.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
